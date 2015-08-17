@@ -18,23 +18,20 @@ Javabuzz.prototype.isDivisibleByFive = function(number) {
   return this._isDivisibleBy(number, 5);
 };
 
-// Player.prototype.play = function(song) {
-//   this.currentlyPlayingSong = song;
-//   this.isPlaying = true;
-// };
+Javabuzz.prototype.says = function(number) {
+  if (this.isDivisibleByFifteen(number)) {
+    return "Fizzbuzz";
+  }
 
-// Player.prototype.pause = function() {
-//   this.isPlaying = false;
-// };
+  if (this.isDivisibleByThree(number)) {
+    return "Fizz";
+  }
 
-// Player.prototype.resume = function() {
-//   if (this.isPlaying) {
-//     throw new Error("song is already playing");
-//   }
+  if (this.isDivisibleByFive(number)) {
+    return "Buzz";
+  }
 
-//   this.isPlaying = true;
-// };
+  return number;
+};
 
-// Player.prototype.makeFavorite = function() {
-//   this.currentlyPlayingSong.persistFavoriteStatus(true);
-// };
+
